@@ -190,7 +190,7 @@ public class DialogProcessor : MonoBehaviour
 
         uiObjects.MessageBox.box.transform.position = uiObjects.MessageBox.startPos.position;
 
-        PlayerController.singleton.canMove = true;
+        parentObj.GetComponent<Interactable>().OnInteractStop();
     }
 
  

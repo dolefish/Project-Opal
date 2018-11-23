@@ -16453,7 +16453,7 @@ MonoBehaviour:
   interacting: 0
   missionControlCheck: {fileID: 0}
   playerDirection: 0
-  startingDirection: 2
+  startingDirection: 3
 --- !u!212 &1207903889
 SpriteRenderer:
   m_ObjectHideFlags: 0

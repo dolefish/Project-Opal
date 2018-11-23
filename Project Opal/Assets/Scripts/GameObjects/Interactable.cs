@@ -80,14 +80,23 @@ public class Interactable : MonoBehaviour {
 
         if (requiredDirection == RequiredDirection.None)
         { print("[>>]No Direction required..."); }
-        else if (requiredDirection.ToString() != playerDirection.ToString())
+        else if (!PlayerFacingRightDirection())
         { OnInteractStop(); print("[>>]Not facing correct direction..."); }
 
-        if (dialog != null)
+        if (dialog != null && interacting)
         {
             print("[>>]Dialog  found and called ...");
             DialogProcessor.singleton.StartDialog(dialog, gameObject);
         }
+    }
+
+    private bool PlayerFacingRightDirection()
+    {
+        if (playerDirection.ToString() == requiredDirection.ToString())
+        { return true; }
+        else
+        { return false; }
+
     }
 
     public void SetDirection()
