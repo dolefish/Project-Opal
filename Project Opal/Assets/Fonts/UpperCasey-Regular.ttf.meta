@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c3a71fcf1b76f9540823c879b73601f3
+timeCreated: 1513299017
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Upper Casey
+  fontNames:
+  - Upper Casey
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

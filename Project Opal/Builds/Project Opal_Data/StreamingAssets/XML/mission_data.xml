@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<MissionDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <list>
+    <Mission>
+      <started>true</started>
+      <finished>false</finished>
+      <stage>1</stage>
+      <branch>0</branch>
+      <id>0</id>
+      <week>0</week>
+      <title>A fresh start!</title>
+      <body>Today is the day I begin my new life, am I so naive for thinking things might actually work out?</body>
+      <goals>
+        <string>Unpack boxes with mom.</string>
+        <string>Go to the Cafe'.</string>
+        <string>Buy a coffee.</string>
+        <string>Give coffee to mom</string>
+      </goals>
+    </Mission>
+  </list>
+</MissionDatabase>

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Interactable
+  - Node
+  - Civilian
+  - Hybrid
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - IgnoreRenderTexture
+  - Civilian
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Lowest
+    uniqueID: 2691270435
+    locked: 0
+  - name: Low
+    uniqueID: 800423623
+    locked: 0
+  - name: Middle
+    uniqueID: 1003346253
+    locked: 0
+  - name: High
+    uniqueID: 1294960573
+    locked: 0
+  - name: Highest
+    uniqueID: 4099089393
+    locked: 0
+  - name: UltraHigh
+    uniqueID: 2655753837
+    locked: 0
