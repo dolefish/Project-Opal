@@ -25,7 +25,7 @@ public class ChangeScene : MonoBehaviour {
     public IEnumerator NextScene(string scene, Vector2 newPos)
     {
         PlayerController.singleton.canMove = false;
-        yield return UIObjects.singleton.FadeScreen(0f, 1f, 1f);
+        yield return UIObjects.singleton.FadeScreen(0f, 1f, 0.25f);
         openAudioSource.Play();
 
         SceneManager.LoadScene(scene);

@@ -17,6 +17,9 @@ public class Interactable : MonoBehaviour {
     [Header("Interact Dialog")]
     public Dialog dialog;
 
+    [Header("Interact SceneTrigger")]
+    public ChangeSceneTrigger sceneTrigger;
+
     [Header("Debug")]
     public bool interacting;
     public MissionControl missionControlCheck;
@@ -38,7 +41,11 @@ public class Interactable : MonoBehaviour {
     {
         ui = UIObjects.singleton;
         player = PlayerController.singleton;
-        SetDirection();
+        Animator animator = GetComponent<Animator>();
+
+        if (animator != null)
+        { SetDirection(animator); }
+        
     }
 
     public void Update()
@@ -75,18 +82,21 @@ public class Interactable : MonoBehaviour {
 
     public void OnInteractStart()
     {
-        print("[>>]Started Interaction ...");
         interacting = true;
 
         if (requiredDirection == RequiredDirection.None)
-        { print("[>>]No Direction required..."); }
+        { }
         else if (!PlayerFacingRightDirection())
-        { OnInteractStop(); print("[>>]Not facing correct direction..."); }
+        { OnInteractStop();}
 
         if (dialog != null && interacting)
         {
-            print("[>>]Dialog  found and called ...");
             DialogProcessor.singleton.StartDialog(dialog, gameObject);
+        }
+
+        if (sceneTrigger != null)
+        {
+            sceneTrigger.CallChangeScene();
         }
     }
 
@@ -99,10 +109,8 @@ public class Interactable : MonoBehaviour {
 
     }
 
-    public void SetDirection()
+    public void SetDirection(Animator animator)
     {
-        Animator animator = GetComponent<Animator>();
-
         #region DisableAllTheBools
         animator.SetBool("faceUp", false);
         animator.SetBool("faceRight", false);
@@ -156,7 +164,9 @@ public class Interactable : MonoBehaviour {
             print("Stopping Interaction");
             player.canMove = true;
             interacting = false;
-        }   
+        }
+
+        ui.ResetChecks();
     }
 
 }

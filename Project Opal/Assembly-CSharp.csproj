@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\GameManagers\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\GameManagers\ChangeSceneTrigger.cs" />
     <Compile Include="Assets\Scripts\GameManagers\Console.cs" />

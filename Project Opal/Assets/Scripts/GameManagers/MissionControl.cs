@@ -88,9 +88,10 @@ public class MissionControl : MonoBehaviour
 
     public void ProgressMission(MissionReference missionRef)
     {
-        MissionList.singleton.SetMissionInfo(missionRef);
+        MissionList.singleton.SetMissionInfo(missionRef);  
         UpdateDiary.singleton.PlayAnimation();
     }
+
 
     public bool MissionRequirementsMet()
     {

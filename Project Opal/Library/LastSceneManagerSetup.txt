@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ChuckleBUCKS.unity
+- path: Assets/Scenes/HollyHouse.unity
   isLoaded: 1
   isActive: 1

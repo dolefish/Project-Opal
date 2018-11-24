@@ -187,7 +187,6 @@ public class DialogProcessor : MonoBehaviour
     {
         NextDialogReady(false);
         inDialogue = false;
-
         uiObjects.MessageBox.box.transform.position = uiObjects.MessageBox.startPos.position;
 
         parentObj.GetComponent<Interactable>().OnInteractStop();

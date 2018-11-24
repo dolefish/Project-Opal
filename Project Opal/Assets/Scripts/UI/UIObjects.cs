@@ -93,6 +93,16 @@ public class UIObjects : MonoBehaviour {
         obj.transform.position = endPos;
     }
 
+    public void ResetChecks()
+    {
+        Color fadeReset = new Color(0, 0, 0, 0);
+        if (fade.color != fadeReset)
+        { fade.color = fadeReset; }
+        if (MessageBox.box.transform.position != MessageBox.startPos.position)
+        { MessageBox.box.transform.position = MessageBox.startPos.position; }
+        print("UIObjects: ResetChecks() called.");
+    }
+
     public IEnumerator ShakeMessageBox()
     {
         Vector3 startPos = MessageBox.box.transform.position;

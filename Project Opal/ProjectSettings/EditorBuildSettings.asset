@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JennApartment.unity
+    path: Assets/Scenes/HollyHouse.unity
     guid: 1e3dd8aabe40b2e41afc919ef5ecfab9
   - enabled: 1
     path: Assets/Scenes/Town.unity
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChuckleBUCKS.unity
     guid: 1b5c991b8942bec4e9f2c16ad3c2ff44
+  - enabled: 1
+    path: Assets/Scenes/LeosCafe.unity
+    guid: 6e3c6e82cc34f6f4480583e45a14a25d
   m_configObjects: {}

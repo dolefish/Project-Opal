@@ -11,23 +11,20 @@ public class ChangeSceneTrigger : MonoBehaviour
     public AudioClip track;
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void CallChangeScene()
     {
-        if (other.tag == "Player")
+        PlayerController pC = PlayerController.singleton.transform.GetComponent<PlayerController>();
+
+        if (requiredDirection == pC.player_Dir)
         {
-            PlayerController pC = other.GetComponent<PlayerController>();
-
-            if (requiredDirection == pC.player_Dir)
+            if (track != null)
             {
-                if (track != null)
-                {
-                    ChangeScene.singleton.musicAudioSource.clip = track;
-                    ChangeScene.singleton.musicAudioSource.Play();
-                }
-
-                StartCoroutine(ChangeScene.singleton.NextScene(scene, newPos));
+                ChangeScene.singleton.musicAudioSource.clip = track;
+                ChangeScene.singleton.musicAudioSource.Play();
             }
-           
+
+            StartCoroutine(ChangeScene.singleton.NextScene(scene, newPos));
+
         }
     }
 

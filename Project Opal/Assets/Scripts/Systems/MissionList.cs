@@ -35,15 +35,50 @@ public class MissionList : MonoBehaviour
         {
             if (missionRef.missionID == missionList[i].id)
             {
-                missionList[i].started = missionRef.started;
-                missionList[i].finished = missionRef.finished;
-                missionList[i].branch = missionRef.branch;
-                missionList[i].stage = missionRef.stage;
-                print("MissionUpdate: ID:" + missionList[i].id + " Started:" + missionList[i].started + " Finished:" + missionList[i].finished + " Branch:" + missionList[i].branch + " Stage:" + missionList[i].stage);
-                break;
+                if (SpecificProgress(missionRef))
+                {
+                    int missID = i;
+                    ProgressMission(missionRef, missID);
+                    break;
+                }
+                else
+                {
+                    missionList[i].started = missionRef.started;
+                    missionList[i].finished = missionRef.finished;
+                    missionList[i].branch = missionRef.branch;
+                    missionList[i].stage = missionRef.stage;
+                    print("MissionUpdate: ID:" + missionList[i].id + " Started:" + missionList[i].started + " Finished:" + missionList[i].finished + " Branch:" + missionList[i].branch + " Stage:" + missionList[i].stage);
+                    break;
+                }
+                
             }
         }      
     }
 
+    private bool SpecificProgress(MissionReference missionRef)
+    {
+        if (missionRef.requireStarted)
+        { return true; }
+        else if (missionRef.requireFinished)
+        { return true; }
+        else if (missionRef.requireBranch)
+        { return true; }
+        else if (missionRef.requireStage)
+        { return true; }
+
+        return false;
+    }
+
+    private void ProgressMission(MissionReference missionRef, int missID)
+    {
+        if (missionRef.requireStarted)
+        { missionList[missID].started = missionRef.started; }
+        if (missionRef.requireFinished)
+        { missionList[missID].finished = missionRef.finished; }
+        if (missionRef.requireBranch)
+        { missionList[missID].branch = missionRef.branch; }
+        if (missionRef.requireStage)
+        { missionList[missID].stage = missionRef.stage; }
+    }
 
 }
